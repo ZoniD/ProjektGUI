@@ -1,0 +1,89 @@
+/* Generel sideopsætning */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for centering */
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Login / Opret Bruger sektion */
+.login {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Overskrift og tekst */
+.login h1 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.login p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+/* Formular */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+}
+
+/* Knapper */
+.login-form button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-form button:hover {
+    background-color: #059669;
+}
+
+/* Links til opret/log ind */
+.signup-msg {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-msg a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-msg a:hover {
+    text-decoration: underline;
+}
