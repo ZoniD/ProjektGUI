@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Opret Bruger</title>
+    <title>Bruger & Opskrifter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
             max-width: 400px;
         }
 
-        form {
+        form, .recipes {
             background: #fff;
             padding: 40px;
             border-radius: 15px;
@@ -30,23 +30,23 @@
             gap: 15px;
         }
 
-        form h1 {
-            margin: 0 0 10px 0;
+        h1 {
             text-align: center;
+            margin: 0 0 10px 0;
         }
 
-        form label {
+        label {
             font-weight: bold;
         }
 
-        form input {
+        input {
             padding: 12px;
             border-radius: 8px;
             border: 1px solid #cbd5e1;
             font-size: 14px;
         }
 
-        form button {
+        button, .btn-recipes {
             background-color: #10b981;
             color: white;
             border: none;
@@ -55,10 +55,11 @@
             font-weight: bold;
             border-radius: 8px;
             cursor: pointer;
-            transition: 0.2s;
+            text-align: center;
+            text-decoration: none;
         }
 
-        form button:hover {
+        button:hover, .btn-recipes:hover {
             background-color: #059669;
         }
 
@@ -96,6 +97,7 @@
         <input type="password" id="password" placeholder="Indtast adgangskode">
         <button type="submit">Log ind</button>
         <div class="switch">Har du ikke en konto? <a id="showSignup">Opret bruger</a></div>
+        <a class="btn-recipes" id="showRecipes">🍲 Se opskrifter</a>
     </form>
 
     <!-- Opret bruger form -->
@@ -111,21 +113,41 @@
         <div class="switch">Har du allerede en konto? <a id="showLogin">Log ind her</a></div>
     </form>
 
+    <!-- Opskriftssektion -->
+    <div class="recipes hidden" id="recipesSection">
+        <h1>Forslag til opskrifter</h1>
+        <ul>
+            <li>Spaghetti med tomatsauce</li>
+            <li>Grøntsagsomelet</li>
+            <li>Kartoffelsalat</li>
+        </ul>
+        <div class="switch"><a id="backLogin">Tilbage til login</a></div>
+    </div>
+
 </div>
 
 <script>
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
-    const showSignup = document.getElementById('showSignup');
-    const showLogin = document.getElementById('showLogin');
+    const recipesSection = document.getElementById('recipesSection');
 
-    showSignup.addEventListener('click', () => {
+    document.getElementById('showSignup').addEventListener('click', () => {
         loginForm.classList.add('hidden');
         signupForm.classList.remove('hidden');
     });
 
-    showLogin.addEventListener('click', () => {
+    document.getElementById('showLogin').addEventListener('click', () => {
         signupForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+    });
+
+    document.getElementById('showRecipes').addEventListener('click', () => {
+        loginForm.classList.add('hidden');
+        recipesSection.classList.remove('hidden');
+    });
+
+    document.getElementById('backLogin').addEventListener('click', () => {
+        recipesSection.classList.add('hidden');
         loginForm.classList.remove('hidden');
     });
 </script>
