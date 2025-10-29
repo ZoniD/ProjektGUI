@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organisation Login</title>
-    <link rel="stylesheet" href="login.css" />
+
+    <link rel="stylesheet" href="../static/organisationLogIn.css">
+
 </head>
 <body>
+
 <div class="login-container">
     <h1>Organisation Login</h1>
-    <form id="loginForm">
-        <label for="username">Brugernavn</label>
-        <input type="text" id="username" name="username" placeholder="Skriv noget..." required />
 
-        <label for="password">Adgangskode</label>
-        <input type="password" id="password" name="password" placeholder="Skriv noget..." required />
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Indtast din email" required>
+
+        <label for="password">Adgangskode:</label>
+        <input type="password" id="password" placeholder="Indtast adgangskode" required>
 
         <button type="submit">Log ind</button>
     </form>
+
+
+
+
+    <a href="valg.html" class="back-link">← Tilbage til valg</a>
 </div>
 
 <script>
-    // Simpelt "fake" login – går bare videre til organisation.html
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        window.location.href = "organisation.html";
+    // Når formularen bliver indsendt
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // stop reloading af siden
+        window.location.href = "organisation.html"; // send brugeren videre
     });
 </script>
+
 </body>
+</html>

@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organisation – ZeroWaste</title>
-  <link rel="stylesheet" href="organisation.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeroWaste – Organisation</title>
+
+  <!-- Forbind til CSS -->
+  <link rel="stylesheet" href="../static/organisation.css">
 </head>
+
 <body>
-<header>
-  <a href="valg.html" class="back-btn">← Tilbage til valg</a>
-  <h1>Organisationens Panel</h1>
-  <p>Her kan din organisation bidrage til kampen mod madspild.</p>
-</header>
 
-<main>
-  <section class="kampagne-section">
-    <h2>Publicer Kampagne</h2>
-    <form class="kampagne-form">
-      <label for="kampagnenavn">Kampagnens navn:</label>
-      <input type="text" id="kampagnenavn" name="kampagnenavn" placeholder="Fx 'Stop Spild Lokalt'" required>
+<!-- HERO SEKTION -->
+<section class="hero">
+  <h1>Organisation – Sammen mod madspild</h1>
+</section>
 
-      <label for="beskrivelse">Beskrivelse:</label>
-      <textarea id="beskrivelse" name="beskrivelse" rows="4" placeholder="Beskriv kampagnens formål..." required></textarea>
+<!-- INDHOLD -->
+<section class="content">
+  <h2>Gør en forskel gennem samarbejde</h2>
+  <p>
+    Som organisation kan du aktivt bidrage til at bekæmpe madspild gennem donationer og kampagner.
+    ZeroWaste-platformen hjælper dig med at nå ud til både virksomheder og forbrugere.
+  </p>
 
-      <button type="submit">Opret kampagne</button>
-    </form>
-  </section>
+  <div class="actions">
+    <div class="card">
+      <h3>📢 Publicer kampagner</h3>
+      <p>Opret bæredygtige initiativer, der inspirerer andre til at mindske spild og støtte velgørenhed.</p>
+      <a href="#" class="btn">Opret kampagne</a>
+    </div>
 
-  <section class="donation-section">
-    <h2>Registrer Doneret Mad</h2>
-    <form class="donation-form">
-      <label for="varenavn">Varenavn:</label>
-      <input type="text" id="varenavn" name="varenavn" placeholder="Fx Brød, grøntsager..." required>
+    <div class="card">
+      <h3>🥕 Donér overskydende madvarer</h3>
+      <p>Registrer og donér overskudsmad, så det kan distribueres til udsatte og velgørende formål.</p>
+      <a href="#" class="btn">Registrer donation</a>
+    </div>
+  </div>
+</section>
 
-      <label for="maengde">Mængde:</label>
-      <input type="text" id="maengde" name="maengde" placeholder="Fx 10 kg" required>
-
-      <label for="modtager">Modtagerorganisation:</label>
-      <input type="text" id="modtager" name="modtager" placeholder="Fx Røde Kors, FødevareBanken" required>
-
-      <button type="submit">Registrer donation</button>
-    </form>
-  </section>
-</main>
-
+<!-- FOOTER -->
 <footer>
-  <p>ZeroWaste © 2025 – Sammen mod madspild</p>
+  &copy; 2025 ZeroWaste – Sammen bekæmper vi madspild.
 </footer>
+
 </body>
 </html>
-
