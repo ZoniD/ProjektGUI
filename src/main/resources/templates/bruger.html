@@ -3,154 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruger & Opskrifter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #a8edea, #fed6e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        form, .recipes {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 0 0 10px 0;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #cbd5e1;
-            font-size: 14px;
-        }
-
-        button, .btn-recipes {
-            background-color: #10b981;
-            color: white;
-            border: none;
-            padding: 12px;
-            font-size: 15px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        button:hover, .btn-recipes:hover {
-            background-color: #059669;
-        }
-
-        .switch {
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .switch a {
-            color: #10b981;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .switch a:hover {
-            text-decoration: underline;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>Madopskrifter</title>
+    <link rel="stylesheet" href="../static/bruger.css">
 </head>
 <body>
 
+<header>Forslag til opskrifter</header>
+
 <div class="container">
-
-    <!-- Login form -->
-    <form id="loginForm">
-        <h1>Login</h1>
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Indtast din email">
-        <label for="password">Adgangskode:</label>
-        <input type="password" id="password" placeholder="Indtast adgangskode">
-        <button type="submit">Log ind</button>
-        <div class="switch">Har du ikke en konto? <a id="showSignup">Opret bruger</a></div>
-        <a class="btn-recipes" id="showRecipes">🍲 Se opskrifter</a>
-    </form>
-
-    <!-- Opret bruger form -->
-    <form id="signupForm" class="hidden">
-        <h1>Opret Bruger</h1>
-        <label for="navn">Navn:</label>
-        <input type="text" id="navn" placeholder="Indtast dit navn">
-        <label for="email2">Email:</label>
-        <input type="email" id="email2" placeholder="Indtast din email">
-        <label for="password2">Adgangskode:</label>
-        <input type="password" id="password2" placeholder="Vælg adgangskode">
-        <button type="submit">Opret bruger</button>
-        <div class="switch">Har du allerede en konto? <a id="showLogin">Log ind her</a></div>
-    </form>
-
-    <!-- Opskriftssektion -->
-    <div class="recipes hidden" id="recipesSection">
-        <h1>Forslag til opskrifter</h1>
-        <ul>
-            <li>Spaghetti med tomatsauce</li>
-            <li>Grøntsagsomelet</li>
-            <li>Kartoffelsalat</li>
-        </ul>
-        <div class="switch"><a id="backLogin">Tilbage til login</a></div>
+    <div class="recipes">
+        <div class="recipe-card">
+            <h3>Spaghetti med tomatsauce</h3>
+            <p>En klassiker med friske tomater og krydderier.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Grøntsagsomelet</h3>
+            <p>Hurtig og sund omelet fyldt med dine favoritgrøntsager.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Kartoffelsalat</h3>
+            <p>Klassisk kartoffelsalat med let dressing og krydderurter.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Vegetarisk curry</h3>
+            <p>Fyldig curry med kokosmælk, grøntsager og krydderier.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Frugt smoothie</h3>
+            <p>Forfriskende smoothie med sæsonens frugt.</p>
+        </div>
     </div>
-
 </div>
-
-<script>
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-    const recipesSection = document.getElementById('recipesSection');
-
-    document.getElementById('showSignup').addEventListener('click', () => {
-        loginForm.classList.add('hidden');
-        signupForm.classList.remove('hidden');
-    });
-
-    document.getElementById('showLogin').addEventListener('click', () => {
-        signupForm.classList.add('hidden');
-        loginForm.classList.remove('hidden');
-    });
-
-    document.getElementById('showRecipes').addEventListener('click', () => {
-        loginForm.classList.add('hidden');
-        recipesSection.classList.remove('hidden');
-    });
-
-    document.getElementById('backLogin').addEventListener('click', () => {
-        recipesSection.classList.add('hidden');
-        loginForm.classList.remove('hidden');
-    });
-</script>
 
 </body>
 </html>
