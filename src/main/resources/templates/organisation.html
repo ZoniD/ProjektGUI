@@ -3,13 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organisation Login</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Organisation – ZeroWaste</title>
+  <link rel="stylesheet" href="organisation.css">
 </head>
 <body>
-<section class="login">
-  <h1>Organisation Login</h1>
-  <p>Her kan du logge ind som organisation.</p>
-</section>
+<header>
+  <a href="valg.html" class="back-btn">← Tilbage til valg</a>
+  <h1>Organisationens Panel</h1>
+  <p>Her kan din organisation bidrage til kampen mod madspild.</p>
+</header>
+
+<main>
+  <section class="kampagne-section">
+    <h2>Publicer Kampagne</h2>
+    <form class="kampagne-form">
+      <label for="kampagnenavn">Kampagnens navn:</label>
+      <input type="text" id="kampagnenavn" name="kampagnenavn" placeholder="Fx 'Stop Spild Lokalt'" required>
+
+      <label for="beskrivelse">Beskrivelse:</label>
+      <textarea id="beskrivelse" name="beskrivelse" rows="4" placeholder="Beskriv kampagnens formål..." required></textarea>
+
+      <button type="submit">Opret kampagne</button>
+    </form>
+  </section>
+
+  <section class="donation-section">
+    <h2>Registrer Doneret Mad</h2>
+    <form class="donation-form">
+      <label for="varenavn">Varenavn:</label>
+      <input type="text" id="varenavn" name="varenavn" placeholder="Fx Brød, grøntsager..." required>
+
+      <label for="maengde">Mængde:</label>
+      <input type="text" id="maengde" name="maengde" placeholder="Fx 10 kg" required>
+
+      <label for="modtager">Modtagerorganisation:</label>
+      <input type="text" id="modtager" name="modtager" placeholder="Fx Røde Kors, FødevareBanken" required>
+
+      <button type="submit">Registrer donation</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>ZeroWaste © 2025 – Sammen mod madspild</p>
+</footer>
 </body>
 </html>
+
