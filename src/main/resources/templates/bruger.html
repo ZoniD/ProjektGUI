@@ -3,37 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madopskrifter</title>
+    <title>ZeroWaste - Madopskrifter</title>
     <link rel="stylesheet" href="../static/bruger.css">
 </head>
 <body>
 
-<header>Forslag til opskrifter</header>
+<header class="site-header">ZeroWaste 🌿</header>
 
-<div class="container">
+<!-- Velkomstsektion -->
+<section id="velkomst" class="container velkomst">
+    <h2>Velkommen til ZeroWaste!</h2>
+    <p>Hej, du er nu logget ind som bruger ♻️<br>Klik på knappen nedenfor for at se bæredygtige opskrifter 🍽️</p>
+    <button onclick="visOpskrifter()" class="valg-knap">Se ZeroWaste-opskrifter</button>
+</section>
+
+<!-- Opskriftssektion -->
+<section id="opskrifter" class="container opskrifter hidden">
+    <h2>ZeroWaste Opskrifter</h2>
     <div class="recipes">
         <div class="recipe-card">
-            <h3>Spaghetti med tomatsauce</h3>
-            <p>En klassiker med friske tomater og krydderier.</p>
+            <h3>Grøntsagsrester i wok</h3>
+            <p>Brug dine grøntsagsrester til en hurtig og lækker wokret.</p>
         </div>
         <div class="recipe-card">
-            <h3>Grøntsagsomelet</h3>
-            <p>Hurtig og sund omelet fyldt med dine favoritgrøntsager.</p>
+            <h3>Brødrester til croutoner</h3>
+            <p>Forvandl tørt brød til sprøde croutoner – perfekt til salater.</p>
         </div>
         <div class="recipe-card">
-            <h3>Kartoffelsalat</h3>
-            <p>Klassisk kartoffelsalat med let dressing og krydderurter.</p>
+            <h3>Kartoffelskrællechips</h3>
+            <p>Lav sprøde chips af skræller i stedet for at smide dem ud.</p>
         </div>
         <div class="recipe-card">
-            <h3>Vegetarisk curry</h3>
-            <p>Fyldig curry med kokosmælk, grøntsager og krydderier.</p>
+            <h3>Restepandekager</h3>
+            <p>Brug mælk, mel og frugt, der snart udløber, til lækre pandekager.</p>
         </div>
         <div class="recipe-card">
             <h3>Frugt smoothie</h3>
-            <p>Forfriskende smoothie med sæsonens frugt.</p>
+            <p>Blend overmoden frugt til en frisk og anti-spild smoothie.</p>
         </div>
     </div>
-</div>
+
+    <div class="tilbage-container">
+        <button onclick="tilbageTilForside()" class="valg-knap">⬅️ Tilbage til ZeroWaste</button>
+    </div>
+</section>
+
+<script>
+    function visOpskrifter() {
+        document.getElementById("velkomst").classList.add("hidden");
+        document.getElementById("opskrifter").classList.remove("hidden");
+    }
+
+    function tilbageTilForside() {
+        document.getElementById("opskrifter").classList.add("hidden");
+        document.getElementById("velkomst").classList.remove("hidden");
+    }
+</script>
 
 </body>
 </html>

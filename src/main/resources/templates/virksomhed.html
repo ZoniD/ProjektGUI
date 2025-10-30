@@ -3,13 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virksomhed Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Virksomhed – Madspildsreduktion</title>
+    <link rel="stylesheet" href="../static/virksomhed.css">
 </head>
 <body>
-<section class="login">
-    <h1>Virksomhed Login</h1>
-    <p>Her kan du logge ind som virksomhed.</p>
-</section>
+
+<header>
+    <h1>Virksomhedens Overskudsvare</h1>
+    <p>Madprodukter på tilbud og reducer madspild 🌍</p>
+</header>
+
+<main>
+    <section class="product-section">
+        <h2>Tilbudsvarer</h2>
+
+        <div class="product-list">
+            <div class="product-card">
+                <h3>Rugbrød</h3>
+                <p>Udløbsdato: <strong>7. november 2025</strong></p>
+                <p>Tilbudspris: 8 kr.</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Yoghurt (1L)</h3>
+                <p>Udløbsdato: <strong>5. november 2025</strong></p>
+                <p>Tilbudspris: 7 kr.</p>
+            </div>
+
+            <div class="product-card">
+                <h3>SødMælk (1 L)</h3>
+                <p>Udløbsdato: <strong>6. november 2025</strong></p>
+                <p>Tilbudspris: 5 kr.</p>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="offer-btn" onclick="toggleForm('offerForm')">Lav tilbud</button>
+            <button class="donate-btn" onclick="toggleForm('donateForm')">Donér overskudsmad</button>
+        </div>
+
+        <!-- Formular til Lav tilbud -->
+        <form id="offerForm" class="hidden">
+            <h3>Opret nyt tilbud</h3>
+            <input type="text" placeholder="Produktnavn" required>
+            <input type="date" required>
+            <input type="number" placeholder="Tilbudspris (kr.)" required>
+            <button type="submit">Gem tilbud</button>
+        </form>
+
+        <!-- Formular til Donation -->
+        <form id="donateForm" class="hidden">
+            <h3>Donér overskudsmad</h3>
+            <input type="text" placeholder="Produktnavn" required>
+            <input type="number" placeholder="Antal enheder" required>
+            <input type="date" required>
+            <button type="submit">Bekræft donation</button>
+        </form>
+    </section>
+
+    <section class="info-section">
+        <h2>Formål</h2>
+        <p>
+            Virksomheden kan annoncere overskudsvare og se statistik over solgte eller donerede varer.
+        </p>
+        <h2>Forløb</h2>
+        <p>
+            Virksomheden opretter en annonce for overskudsvare → systemet bekræfter oprettelsen.
+            Virksomheden forespørger statistik over solgte/donerede varer → systemet viser data og grafer.
+        </p>
+        <h2>Analyse</h2>
+        <p>
+            Diagrammet illustrerer virksomhedens interaktioner med systemet:
+            dataindlevering (oprette annonce) og dataudtræk (statistik) på et overskueligt niveau.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>ZeroWaste – Sammen mod madspild ♻️</p>
+</footer>
+
+<script>
+    function toggleForm(formId) {
+        const form = document.getElementById(formId);
+        form.classList.toggle("hidden");
+    }
+</script>
+
 </body>
 </html>
