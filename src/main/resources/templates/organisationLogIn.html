@@ -33,6 +33,7 @@
     // Når formularen bliver indsendt
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault(); // stop reloading af siden
+        alert("✅ Velkommen! Du er nu logget ind som organisation.");
         window.location.href = "organisation.html"; // send brugeren videre
     });
 </script>
