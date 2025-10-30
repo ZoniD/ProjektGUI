@@ -14,11 +14,11 @@
 <section id="velkomst" class="container velkomst">
     <h2>Velkommen til ZeroWaste!</h2>
     <p>Hej, du er nu logget ind som bruger ♻️<br>Klik på knappen nedenfor for at se bæredygtige opskrifter 🍽️</p>
-    <button onclick="visOpskrifter()" class="valg-knap">Se ZeroWaste-opskrifter</button>
+    <a href="#opskrifter" class="valg-knap">Se ZeroWaste-opskrifter</a>
 </section>
 
 <!-- Opskriftssektion -->
-<section id="opskrifter" class="container opskrifter hidden">
+<section id="opskrifter" class="container opskrifter">
     <h2>ZeroWaste Opskrifter</h2>
     <div class="recipes">
         <div class="recipe-card">
@@ -44,21 +44,9 @@
     </div>
 
     <div class="tilbage-container">
-        <button onclick="tilbageTilForside()" class="valg-knap">⬅️ Tilbage til ZeroWaste</button>
+        <a href="#velkomst" class="valg-knap">⬅️ Tilbage til ZeroWaste</a>
     </div>
 </section>
-
-<script>
-    function visOpskrifter() {
-        document.getElementById("velkomst").classList.add("hidden");
-        document.getElementById("opskrifter").classList.remove("hidden");
-    }
-
-    function tilbageTilForside() {
-        document.getElementById("opskrifter").classList.add("hidden");
-        document.getElementById("velkomst").classList.remove("hidden");
-    }
-</script>
 
 </body>
 </html>

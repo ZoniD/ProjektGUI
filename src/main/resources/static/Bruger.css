@@ -43,6 +43,7 @@ body {
 
 /* --- Knapper --- */
 .valg-knap {
+    display: inline-block;
     background: linear-gradient(145deg, #00b894, #019875);
     color: white;
     font-weight: bold;
@@ -53,6 +54,7 @@ body {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
 }
 
 .valg-knap:hover {
@@ -85,8 +87,19 @@ body {
 }
 
 /* --- Skjulte sektioner --- */
-.hidden {
+.velkomst,
+.opskrifter {
     display: none;
+}
+
+#velkomst:target,
+#opskrifter:target {
+    display: block;
+}
+
+/* Default visning */
+#velkomst {
+    display: block;
 }
 
 /* --- Responsive --- */
@@ -95,6 +108,7 @@ body {
         width: 80%;
         font-size: 1rem;
     }
+
     .recipes {
         gap: 15px;
     }
