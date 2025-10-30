@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opret kampagne – ZeroWaste</title>
+    <link rel="stylesheet" href="../static/kampagner.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Opret en ny kampagne</h1>
+
+    <form id="kampagneForm">
+        <label for="navn">Kampagnens navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Fx 'Madspildsdag 2025'" required>
+
+        <label for="beskrivelse">Beskrivelse:</label>
+        <textarea id="beskrivelse" name="beskrivelse" placeholder="Skriv kort om kampagnen..." required></textarea>
+
+        <label for="dato">Startdato:</label>
+        <input type="date" id="dato" name="dato" required>
+
+        <button type="submit">Gem kampagne</button>
+    </form>
+
+    <a href="organisation.html" class="back-link">← Tilbage til organisation</a>
+</div>
+
+<script>
+    // Viser en besked og sender brugeren tilbage
+    document.getElementById("kampagneForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("✅ Kampagne oprettet! Du sendes nu tilbage til organisationens side.");
+        window.location.href = "organisation.html";
+    });
+</script>
+
+</body>
+</html>
