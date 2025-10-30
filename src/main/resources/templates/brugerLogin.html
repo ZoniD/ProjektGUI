@@ -3,17 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login / Opret Bruger</title>
-  <!-- CSS sti korrekt i forhold til folderstruktur -->
-  <link rel="stylesheet" href="../static/login.css">
+  <title>ZeroWaste - Login / Opret Bruger</title>
+  <link rel="stylesheet" href="../static/brugerLogin.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+
+    header {
+      background-color: #019875;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #019875;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 20px;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .back-btn:hover {
+      background-color: #00b894;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
+<header>ZeroWaste 🌿</header>
+
+<!-- Tilbage knap -->
+<a href="valg.html" class="back-btn">⬅️ Tilbage til Valg</a>
 
 <div class="container">
 
   <!-- Login Form -->
   <form id="loginForm" class="login-form">
-    <h1>Login</h1>
+    <h1>Login til ZeroWaste</h1>
     <label for="email">Email:</label>
     <input type="email" id="email" placeholder="Indtast din email" required>
     <label for="password">Adgangskode:</label>
@@ -26,7 +67,7 @@
 
   <!-- Opret Bruger Form -->
   <form id="signupForm" class="login-form hidden">
-    <h1>Opret Bruger</h1>
+    <h1>Opret Bruger hos ZeroWaste</h1>
     <label for="navn">Navn:</label>
     <input type="text" id="navn" placeholder="Indtast dit navn" required>
     <label for="email2">Email:</label>
@@ -62,12 +103,16 @@
   // Login - redirect til bruger.html
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const email = document.getElementById('email').value;
+    localStorage.setItem('brugerEmail', email);
     window.location.href = "bruger.html";
   });
 
   // Opret bruger - redirect til bruger.html
   signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const navn = document.getElementById('navn').value;
+    localStorage.setItem('brugerNavn', navn);
     window.location.href = "bruger.html";
   });
 </script>

@@ -3,37 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madopskrifter</title>
+    <title>ZeroWaste - Madopskrifter</title>
     <link rel="stylesheet" href="../static/bruger.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #019875;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .valg-knap {
+            background: linear-gradient(145deg, #00b894, #019875);
+            color: white;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .valg-knap:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* --- OPSKRIFTER SEKTION --- */
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.03);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<header>Forslag til opskrifter</header>
+<header>ZeroWaste 🌿</header>
 
-<div class="container">
+<!-- Første sektion: Velkomst og knap -->
+<div id="velkomst" class="container">
+    <h2>Velkommen til ZeroWaste!</h2>
+    <p>Hej, du er nu logget ind som bruger ♻️<br>Klik herunder for at se bæredygtige madopskrifter 🍽️</p>
+    <button onclick="visOpskrifter()" class="valg-knap">Se ZeroWaste-opskrifter</button>
+</div>
+
+<!-- Anden sektion: Opskrifter (skjult som standard) -->
+<div id="opskrifter" class="hidden">
+    <header>ZeroWaste Opskrifter</header>
     <div class="recipes">
         <div class="recipe-card">
-            <h3>Spaghetti med tomatsauce</h3>
-            <p>En klassiker med friske tomater og krydderier.</p>
+            <h3>Grøntsagsrester i wok</h3>
+            <p>Brug dine grøntsagsrester til en hurtig og lækker wokret.</p>
         </div>
         <div class="recipe-card">
-            <h3>Grøntsagsomelet</h3>
-            <p>Hurtig og sund omelet fyldt med dine favoritgrøntsager.</p>
+            <h3>Brødrester til croutoner</h3>
+            <p>Forvandl tørt brød til sprøde croutoner – perfekt til salater.</p>
         </div>
         <div class="recipe-card">
-            <h3>Kartoffelsalat</h3>
-            <p>Klassisk kartoffelsalat med let dressing og krydderurter.</p>
+            <h3>Kartoffelskrællechips</h3>
+            <p>Lav sprøde chips af skræller i stedet for at smide dem ud.</p>
         </div>
         <div class="recipe-card">
-            <h3>Vegetarisk curry</h3>
-            <p>Fyldig curry med kokosmælk, grøntsager og krydderier.</p>
+            <h3>Restepandekager</h3>
+            <p>Brug mælk, mel og frugt, der snart udløber, til lækre pandekager.</p>
         </div>
         <div class="recipe-card">
             <h3>Frugt smoothie</h3>
-            <p>Forfriskende smoothie med sæsonens frugt.</p>
+            <p>Blend overmoden frugt til en frisk og anti-spild smoothie.</p>
         </div>
     </div>
+
+    <div style="text-align:center; margin-bottom: 50px;">
+        <button onclick="tilbageTilForside()" class="valg-knap">⬅️ Tilbage til ZeroWaste</button>
+    </div>
 </div>
+
+<script>
+    function visOpskrifter() {
+        document.getElementById("velkomst").classList.add("hidden");
+        document.getElementById("opskrifter").classList.remove("hidden");
+    }
+
+    function tilbageTilForside() {
+        document.getElementById("opskrifter").classList.add("hidden");
+        document.getElementById("velkomst").classList.remove("hidden");
+    }
+</script>
 
 </body>
 </html>
