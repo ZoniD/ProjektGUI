@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZeroWaste - Madopskrifter</title>
-    <link rel="stylesheet" href="../static/bruger.css">
+    <title>ZeroWaste - Bruger</title>
+    <link rel="stylesheet" href="../static/Bruger.css">
 </head>
 <body>
 
-<header class="site-header">ZeroWaste 🌿</header>
+<header class="site-header">
+    <h1>ZeroWaste 🌿</h1>
+</header>
 
-<!-- Velkomstsektion -->
-<section id="velkomst" class="container velkomst">
+<!-- Velkomst -->
+<section id="velkomst" class="container velkomst active">
     <h2>Velkommen til ZeroWaste!</h2>
-    <p>Hej, du er nu logget ind som bruger ♻️<br>Klik på knappen nedenfor for at se bæredygtige opskrifter 🍽️</p>
-    <a href="#opskrifter" class="valg-knap">Se ZeroWaste-opskrifter</a>
+    <p>Hej, du er nu logget ind som bruger ♻️<br>
+        Vælg, hvad du vil gøre nedenfor:</p>
+
+    <div class="knap-gruppe">
+        <a href="#opskrifter" class="valg-knap">🍽️ Se opskrifter</a>
+        <a href="#artikler" class="valg-knap">📰 Se artikler</a>
+        <a href="#tilfoj" class="valg-knap">➕ Tilføj vare</a>
+    </div>
 </section>
 
-<!-- Opskriftssektion -->
-<section id="opskrifter" class="container opskrifter">
+<!-- Opskrifter -->
+<section id="opskrifter" class="container skjul">
     <h2>ZeroWaste Opskrifter</h2>
+
     <div class="recipes">
         <div class="recipe-card">
             <h3>Grøntsagsrester i wok</h3>
@@ -43,9 +52,53 @@
         </div>
     </div>
 
-    <div class="tilbage-container">
-        <a href="#velkomst" class="valg-knap">⬅️ Tilbage til ZeroWaste</a>
+    <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>
+</section>
+
+<!-- Artikler -->
+<section id="artikler" class="container skjul">
+    <h2>Daglige artikler fra organisationer 📰</h2>
+
+    <div class="recipes">
+        <div class="recipe-card">
+            <h3>Madspild reduceret med 20% i København</h3>
+            <p>Organisationen “Stop Spild Lokalt” deler nye tal for deres indsats.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Ny kampagne: “Spis dine rester!”</h3>
+            <p>Miljøstyrelsen lancerer en kampagne om kreative måder at bruge madrester.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Skoler lærer elever om bæredygtighed</h3>
+            <p>Flere skoler arbejder sammen med ZeroWaste for at mindske madspild.</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Interview: Frivillige gør en forskel</h3>
+            <p>Mød Lene, der organiserer lokale madspildsinitiativer i Aarhus.</p>
+        </div>
     </div>
+
+    <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>
+</section>
+
+<!-- Tilføj vare -->
+<section id="tilfoj" class="container skjul">
+    <h2>Tilføj en ny vare</h2>
+
+    <form class="tilfoj-form">
+        <label for="varenavn">Varenavn</label>
+        <input type="text" id="varenavn" name="varenavn" placeholder="F.eks. Æbler" required>
+
+        <label for="kategori">Kategori</label>
+        <input type="text" id="kategori" name="kategori" placeholder="F.eks. Frugt" required>
+
+        <label for="udlobsdato">Udløbsdato</label>
+        <input type="date" id="udlobsdato" name="udlobsdato" required>
+
+        <button type="submit" disabled>Tilføj vare</button>
+    </form>
+
+    <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>
 </section>
 
 </body>
