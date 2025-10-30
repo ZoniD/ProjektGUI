@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Registrering</title>
+    <link rel="stylesheet" href="../static/virksomhedLogin.css" />
+</head>
+<body>
+<div class="container">
+    <div class="login" id="loginBox">
+        <h1>Login</h1>
+        <form class="login-form" id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Indtast din email" required />
+
+            <label for="password">Adgangskode:</label>
+            <input type="password" id="password" placeholder="Indtast adgangskode" required />
+
+            <button type="submit">Log ind</button>
+        </form>
+
+        <p class="signup-msg">
+            Har du ikke en konto? <a href="#" id="showRegister">Opret bruger</a>
+        </p>
+    </div>
+
+    <div class="login hidden" id="registerBox">
+        <h1>Opret bruger</h1>
+        <form class="login-form" id="registerForm">
+            <label for="newEmail">Email:</label>
+            <input type="email" id="newEmail" placeholder="Indtast din email" required />
+
+            <label for="newPassword">Adgangskode:</label>
+            <input type="password" id="newPassword" placeholder="Vælg adgangskode" required />
+
+            <label for="confirmPassword">Bekræft adgangskode:</label>
+            <input type="password" id="confirmPassword" placeholder="Gentag adgangskode" required />
+
+            <button type="submit">Opret konto</button>
+        </form>
+
+        <p class="signup-msg">
+            Har du allerede en konto? <a href="#" id="showLogin">Tilbage til login</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    // Skift mellem login og registrering
+    const loginBox = document.getElementById("loginBox");
+    const registerBox = document.getElementById("registerBox");
+    const showRegister = document.getElementById("showRegister");
+    const showLogin = document.getElementById("showLogin");
+
+    showRegister.addEventListener("click", () => {
+        loginBox.classList.add("hidden");
+        registerBox.classList.remove("hidden");
+    });
+
+    showLogin.addEventListener("click", () => {
+        registerBox.classList.add("hidden");
+        loginBox.classList.remove("hidden");
+    });
+
+    // Simpel registreringsfunktion (kun demo)
+    const registerForm = document.getElementById("registerForm");
+    registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("newEmail").value;
+        const pass = document.getElementById("newPassword").value;
+        const confirm = document.getElementById("confirmPassword").value;
+
+        if (pass !== confirm) {
+            alert("Adgangskoderne matcher ikke!");
+            return;
+        }
+
+        alert("Konto oprettet for: " + email);
+        registerForm.reset();
+        registerBox.classList.add("hidden");
+        loginBox.classList.remove("hidden");
+    });
+    // Login - redirect til virksomhed.html
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = "virksomhed.html";
+    });
+
+    // Opret bruger - redirect til virksomhed.html
+    signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = "virksomhed.html";
+    });
+</script>
+</body>
+</html>
