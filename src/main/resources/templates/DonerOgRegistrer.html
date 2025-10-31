@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrer eller Donér – ZeroWaste</title>
+  <link rel="stylesheet" href="../static/DonerOgRegistrer.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h1>Registrer eller Donér Madvarer</h1>
+
+  <form id="donerForm">
+    <label for="valg">Vælg handling:</label>
+    <select id="valg" name="valg" required>
+      <option value="">-- Vælg en mulighed --</option>
+      <option value="doner">Donér madvarer</option>
+      <option value="registrer">Registrér modtaget mad</option>
+    </select>
+
+    <label for="navn">Madvarens navn:</label>
+    <input type="text" id="navn" name="navn" placeholder="Fx 'Æbler', 'Brød', 'Kartofler'" required>
+
+    <label for="mængde">Mængde:</label>
+    <input type="text" id="mængde" name="mængde" placeholder="Fx '10 kg', '20 stk'" required>
+
+    <label for="dato">Dato:</label>
+    <input type="date" id="dato" name="dato" required>
+
+    <button type="submit">Gem oplysninger</button>
+  </form>
+
+  <a href="organisation.html" class="back-link">← Tilbage til organisation</a>
+</div>
+
+<script>
+  document.getElementById("donerForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const valg = document.getElementById("valg").value;
+    if (valg === "doner") {
+      alert("✅ Tak for din donation! Du sendes nu tilbage til organisationens side.");
+    } else if (valg === "registrer") {
+      alert("📦 Varen er registreret! Du sendes nu tilbage til organisationens side.");
+    } else {
+      alert("Vælg venligst en handling før du fortsætter.");
+      return;
+    }
+    window.location.href = "organisation.html";
+  });
+</script>
+
+</body>
+</html>
+
