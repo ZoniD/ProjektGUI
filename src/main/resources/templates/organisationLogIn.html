@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organisation Login</title>
-
     <link rel="stylesheet" href="../static/organisationLogIn.css">
 
 </head>
 <body>
 
 <div class="login-container">
-    <h1>Organisation Login</h1>
+    <h1>Organisation Login 🌿</h1>
 
-    <form id="loginForm">
+    <!-- Formularen sender nu direkte til organisation.html -->
+    <form action="organisation.html" method="get">
         <label for="email">Email:</label>
         <input type="email" id="email" placeholder="Indtast din email" required>
 
@@ -23,20 +23,8 @@
         <button type="submit">Log ind</button>
     </form>
 
-
-
-
     <a href="valg.html" class="back-link">← Tilbage til valg</a>
 </div>
-
-<script>
-    // Når formularen bliver indsendt
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // stop reloading af siden
-        alert("✅ Velkommen! Du er nu logget ind som organisation.");
-        window.location.href = "organisation.html"; // send brugeren videre
-    });
-</script>
 
 </body>
 </html>
