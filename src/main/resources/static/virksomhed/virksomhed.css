@@ -24,24 +24,10 @@ header h1 {
     color: #0f172a;
 }
 
-header p {
-    color: #475569;
-}
-
-/* Hovedindhold */
-main {
-    flex: 1;
-    padding: 30px;
-}
-
 /* Produktsektion */
 .product-section {
     text-align: center;
     margin-bottom: 40px;
-}
-
-.product-section h2 {
-    color: #065f46;
 }
 
 .product-list {
@@ -60,13 +46,15 @@ main {
     width: 200px;
 }
 
-.product-card h3 {
-    margin-top: 0;
-    color: #047857;
+.button-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Knap til donation */
-.donate-btn {
+/* Knapper */
+.offer-btn, .donate-btn {
     background-color: #10b981;
     color: white;
     border: none;
@@ -74,15 +62,49 @@ main {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 25px;
     transition: 0.3s;
 }
 
-.donate-btn:hover {
+.offer-btn:hover, .donate-btn:hover {
     background-color: #059669;
 }
 
-/* Info-sektion */
+/* Formularer */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Info og footer */
 .info-section {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
@@ -92,14 +114,11 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.info-section h2 {
-    color: #065f46;
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
 }
+
+

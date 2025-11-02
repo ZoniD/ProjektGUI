@@ -1,97 +1,52 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login & Registrering</title>
-    <link rel="stylesheet" href="../static/virksomhedLogin.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroWaste - Login / Opret Virksomhed</title>
+    <link rel="stylesheet" href="../static/virksomhed/virksomhedLogin.css">
 </head>
 <body>
+
 <div class="container">
-    <div class="login" id="loginBox">
-        <h1>Login</h1>
-        <form class="login-form" id="loginForm">
+
+    <!-- Login sektion -->
+    <div id="login" class="login-section">
+        <h1>ZeroWaste 🌿</h1>
+        <p>Login for virksomheder</p>
+        <form action="virksomhed.html" method="get">
             <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Indtast din email" required />
-
+            <input type="email" id="email" name="email" placeholder="Indtast virksomheds-email" required>
             <label for="password">Adgangskode:</label>
-            <input type="password" id="password" placeholder="Indtast adgangskode" required />
-
+            <input type="password" id="password" name="password" placeholder="Indtast adgangskode" required>
             <button type="submit">Log ind</button>
         </form>
-
-        <p class="signup-msg">
-            Har du ikke en konto? <a href="#" id="showRegister">Opret bruger</a>
-        </p>
+        <div class="links">
+            Har du ikke en konto? <a href="#opret">Opret virksomhed</a><br>
+            <a href="valg.html">← Tilbage til Valg</a>
+        </div>
     </div>
 
-    <div class="login hidden" id="registerBox">
-        <h1>Opret bruger</h1>
-        <form class="login-form" id="registerForm">
-            <label for="newEmail">Email:</label>
-            <input type="email" id="newEmail" placeholder="Indtast din email" required />
-
-            <label for="newPassword">Adgangskode:</label>
-            <input type="password" id="newPassword" placeholder="Vælg adgangskode" required />
-
-            <label for="confirmPassword">Bekræft adgangskode:</label>
-            <input type="password" id="confirmPassword" placeholder="Gentag adgangskode" required />
-
-            <button type="submit">Opret konto</button>
+    <!-- Opret Virksomhed sektion -->
+    <div id="opret" class="login-section">
+        <h1>Opret Virksomhed</h1>
+        <p>Registrér din virksomhed hos ZeroWaste</p>
+        <form action="virksomhed.html" method="get">
+            <label for="virksomhedsnavn">Virksomhedsnavn:</label>
+            <input type="text" id="virksomhedsnavn" name="virksomhedsnavn" placeholder="Indtast virksomhedsnavn" required>
+            <label for="email2">Email:</label>
+            <input type="email" id="email2" name="email" placeholder="Indtast virksomheds-email" required>
+            <label for="password2">Adgangskode:</label>
+            <input type="password" id="password2" name="password" placeholder="Vælg adgangskode" required>
+            <button type="submit">Opret virksomhed</button>
         </form>
-
-        <p class="signup-msg">
-            Har du allerede en konto? <a href="#" id="showLogin">Tilbage til login</a>
-        </p>
+        <div class="links">
+            Har du allerede en konto? <a href="#login">Log ind</a><br>
+            <a href="valg.html">← Tilbage til Valg</a>
+        </div>
     </div>
+
 </div>
 
-<script>
-    // Skift mellem login og registrering
-    const loginBox = document.getElementById("loginBox");
-    const registerBox = document.getElementById("registerBox");
-    const showRegister = document.getElementById("showRegister");
-    const showLogin = document.getElementById("showLogin");
-
-    showRegister.addEventListener("click", () => {
-        loginBox.classList.add("hidden");
-        registerBox.classList.remove("hidden");
-    });
-
-    showLogin.addEventListener("click", () => {
-        registerBox.classList.add("hidden");
-        loginBox.classList.remove("hidden");
-    });
-
-    // Simpel registreringsfunktion (kun demo)
-    const registerForm = document.getElementById("registerForm");
-    registerForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const email = document.getElementById("newEmail").value;
-        const pass = document.getElementById("newPassword").value;
-        const confirm = document.getElementById("confirmPassword").value;
-
-        if (pass !== confirm) {
-            alert("Adgangskoderne matcher ikke!");
-            return;
-        }
-
-        alert("Konto oprettet for: " + email);
-        registerForm.reset();
-        registerBox.classList.add("hidden");
-        loginBox.classList.remove("hidden");
-    });
-    // Login - redirect til virksomhed.html
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        window.location.href = "virksomhed.html";
-    });
-
-    // Opret bruger - redirect til virksomhed.html
-    signupForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        window.location.href = "virksomhed.html";
-    });
-</script>
 </body>
 </html>
