@@ -1,9 +1,7 @@
-/* Generel opsætning */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #c8f7c5, #fddde6); /* lysegrøn + lyserød */
+    background: linear-gradient(to right, #d2f8d2, #ffe3e3);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -13,112 +11,136 @@ body {
 /* Header */
 header {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255,255,255,0.8);
     padding: 20px;
-    border-bottom: 2px solid #10b981;
+    border-bottom: 3px solid #10b981;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
-    color: #0f172a;
+    color: #065f46;
 }
 
-/* Produktsektion */
-.product-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.product-list {
+/* --- MENU PAGE --- */
+.menu {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
-.product-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 200px;
-}
-
-.button-container {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Knapper */
-.offer-btn, .donate-btn {
+.menu-btn {
     background-color: #10b981;
     color: white;
+    padding: 20px 40px;
+    font-size: 18px;
     border: none;
-    padding: 12px 24px;
-    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-btn:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+}
+
+/* --- FORM PAGES --- */
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+form {
+    background-color: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.offer-btn:hover, .donate-btn:hover {
+button:hover {
     background-color: #059669;
 }
 
-/* Formularer */
-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
+/* --- PRODUCT CARDS --- */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: white;
     padding: 20px;
-    margin: 20px auto;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- REPORT BOXES --- */
+.report {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.report-box {
+    background-color: white;
+    padding: 20px;
     width: 300px;
+    text-align: center;
+    border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
 }
 
-form input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    width: 100%;
-    background-color: #10b981;
-    color: white;
-    border: none;
-    padding: 12px;
+/* --- Common --- */
+.back-link {
+    margin-top: 25px;
+    display: inline-block;
+    color: #10b981;
     font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-.hidden {
-    display: none;
-}
-
-/* Info og footer */
-.info-section {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    padding: 25px;
-    margin: 0 auto;
-    max-width: 700px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.back-link:hover {
+    text-decoration: underline;
 }
 
 footer {
+    margin-top: auto;
     text-align: center;
+    background-color: rgba(255,255,255,0.7);
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
 }
-
-
