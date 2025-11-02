@@ -30,13 +30,13 @@ body {
     display: block;
 }
 
-/* Overskrift */
+/* denne her boks er til overskrift */
 h1 {
     margin-bottom: 20px;
     color: #019875; /* Grøn accent */
 }
 
-/* Beskrivelse */
+/* det er til beskrivelse */
 p {
     margin-bottom: 20px;
     color: #475569;
