@@ -21,7 +21,16 @@
     <div class="knap-gruppe">
         <a href="#opskrifter" class="valg-knap">🍽️ Se opskrifter</a>
         <a href="#artikler" class="valg-knap">📰 Se artikler</a>
+        <a href="#rapport" class="valg-knap">📊 Se min rapport</a>
         <a href="#tilfoj" class="valg-knap">➕ Tilføj vare</a>
+    </div>
+
+    <!-- Tilføjet knap-gruppe med forside og log ud -->
+    <div class="knap-gruppe">
+        <!-- Gå til forsiden -->
+        <a href="Index.html" class="valg-knap">🏠 Til forsiden</a>
+        <!-- Log ud -->
+        <a href="brugerLogin.html" class="valg-knap logout-knap">🚪 Log ud</a>
     </div>
 </section>
 
@@ -81,11 +90,34 @@
     <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>
 </section>
 
+<!-- Rapport -->
+<section id="rapport" class="container skjul">
+    <h2>Din personlige rapport 📊</h2>
+    <p>Her kan du se din månedlige oversigt over tilføjede varer, sparede kilo mad og CO₂-besparelse.</p>
+
+    <div class="recipes">
+        <div class="recipe-card">
+            <h3>Madspild sparet</h3>
+            <p>Du har sparet <strong>12 kg</strong> mad i denne måned! 🥦</p>
+        </div>
+        <div class="recipe-card">
+            <h3>CO₂ besparelse</h3>
+            <p>Din indsats svarer til <strong>25 kg CO₂</strong> mindre udledning 🌍</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Tilføjede varer</h3>
+            <p>Du har registreret <strong>18 varer</strong> i denne måned 🧾</p>
+        </div>
+    </div>
+
+    <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>
+</section>
+
 <!-- Tilføj vare -->
 <section id="tilfoj" class="container skjul">
     <h2>Tilføj en ny vare</h2>
 
-    <form class="tilfoj-form">
+    <form class="tilfoj-form" action="/tilfojVare" method="post">
         <label for="varenavn">Varenavn</label>
         <input type="text" id="varenavn" name="varenavn" placeholder="F.eks. Æbler" required>
 
@@ -95,7 +127,7 @@
         <label for="udlobsdato">Udløbsdato</label>
         <input type="date" id="udlobsdato" name="udlobsdato" required>
 
-        <button type="submit" disabled>Tilføj vare</button>
+        <button type="submit">Tilføj vare</button>
     </form>
 
     <a href="#velkomst" class="tilbage-knap">⬅️ Tilbage</a>

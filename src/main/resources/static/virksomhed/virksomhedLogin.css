@@ -1,0 +1,122 @@
+/* --- Generel opsætning --- */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(0, 80, 50, 0.6), #006644);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container med to sektioner side om side */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 180px; /* 💡 Stor afstand mellem login og opret */
+    position: relative;
+}
+
+/* Login / Opret virksomhed bokse */
+.login-section {
+    background-color: white;
+    padding: 45px 35px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    width: 340px;
+    text-align: center;
+    display: none; /* Skjult som udgangspunkt */
+}
+
+/* Default: vis login */
+#login {
+    display: block;
+}
+
+/* Når man klikker på "Opret virksomhed" */
+#opret:target {
+    display: block;
+    position: relative;
+}
+
+/* Når #opret vises, behold login synligt til venstre */
+#opret:target ~ #login {
+    display: block;
+}
+
+/* Justér layout så begge ses side om side når opret er aktiv */
+#opret:target,
+#opret:target ~ #login {
+    position: static;
+}
+
+/* Overskrift */
+h1 {
+    margin-bottom: 25px;
+    color: #019875;
+    font-size: 26px;
+}
+
+/* Beskrivelse */
+p {
+    margin-bottom: 25px;
+    color: #475569;
+    font-size: 15px;
+}
+
+/* Formular */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Knapper */
+button {
+    background-color: #10b981;
+    color: white;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+/* Links */
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

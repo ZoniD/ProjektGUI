@@ -41,6 +41,8 @@ body {
     border-radius: 12px;
     transition: 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: none;
+    cursor: pointer;
 }
 
 .valg-knap:hover, .tilbage-knap:hover {
@@ -48,7 +50,16 @@ body {
     transform: translateY(-3px);
 }
 
-/* === OPSKRIFTER & ARTIKLER === */
+/* === LOG UD KNAP === */
+.logout-knap {
+    background: linear-gradient(145deg, #d63031, #b71c1c);
+}
+
+.logout-knap:hover {
+    background: linear-gradient(145deg, #ff3b3b, #c62828);
+}
+
+/* === OPSKRIFTER, ARTIKLER & RAPPORT === */
 .recipes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -103,8 +114,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 10px;
-    cursor: not-allowed;
-    opacity: 0.6;
+    cursor: pointer;
 }
 
 /* === VISNING === */
@@ -115,7 +125,8 @@ body {
 #velkomst:target,
 #opskrifter:target,
 #tilfoj:target,
-#artikler:target {
+#artikler:target,
+#rapport:target {
     display: block;
 }
 
