@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - zerowaste
+name: Build and deploy JAR app to Azure Web App - ZeroWaste
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_134908EE87FD47898B382C15D6F27A3E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A656AA70EF0B4D58B6F03CF10323CD94 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6D0E97E0EEE24ACA87557B48E9D48147 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6C53B45404D34371B88E7164E5A34C9E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FC03B2A1B3824F508D55C66F3D49D50D }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4BA23FF07B744E39B9BF6BB77E9757E1 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'zerowaste'
+          app-name: 'ZeroWaste'
           slot-name: 'Production'
           package: '*.jar'
           

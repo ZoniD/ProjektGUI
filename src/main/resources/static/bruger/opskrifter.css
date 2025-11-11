@@ -1,45 +1,55 @@
+/* --- GENEREL OPSÆTNING --- */
+/* Sætter baggrund, margin og skrifttype for hele siden */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7fff8;
-    color: #333;
+    background: #f7fff8; /* Lys grøn baggrund */
+    color: #333; /* Standard tekstfarve */
 }
 
+/* --- HERO-SEKTION --- */
+/* Stor banner-sektion øverst med billede og overlay */
 .hero {
-    height: 40vh;
+    height: 40vh; /* 40% af skærmhøjden */
     background: linear-gradient(rgba(0,80,50,0.6), rgba(0,80,50,0.6)),
     url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1950&q=80")
-    center/cover no-repeat;
-    display: flex;
+    center/cover no-repeat; /* Baggrundsbillede med gradient overlay */
+    display: flex; /* Centrerer teksten horisontalt og vertikalt */
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white; /* Tekstfarve i hero */
 }
 
+/* --- INDHOLDSSEKTION --- */
+/* Container til tekst og beskrivelser */
 .content {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: white;
+    max-width: 800px; /* Maksimal bredde */
+    margin: 2rem auto; /* Centrerer sektionen og giver top/bund margin */
+    background: white; /* Hvid baggrund for læsbarhed */
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 15px; /* Runde hjørner */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Let skygge for dybde */
+    text-align: center; /* Centrerer tekst */
 }
 
+/* --- EKSEMPELSEKTION --- */
+/* Box til opskrifter eller info med grøn venstre kant */
 .example {
     margin-top: 2rem;
-    background: #e8f5e9;
-    border-left: 5px solid #10b981;
+    background: #e8f5e9; /* Lys grøn baggrund */
+    border-left: 5px solid #10b981; /* Grøn kant til venstre */
     padding: 1rem;
     border-radius: 10px;
 }
 
+/* --- TILBAGE-KNAP --- */
+/* Styling af knap til at gå tilbage */
 .back-btn {
     display: inline-block;
     margin-top: 2rem;
-    text-decoration: none;
-    background: #10b981;
-    color: white;
+    text-decoration: none; /* Fjerner understregning */
+    background: #10b981; /* Grøn knapbaggrund */
+    color: white; /* Hvid tekst */
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 6px; /* Let runding */
 }

@@ -1,60 +1,74 @@
+/* --- GENEREL OPSÆTNING --- */
+/* Standard margin, skrifttype, baggrund og tekstfarve */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fffdf7;
-    color: #333;
+    background: #fffdf7; /* Lys beige baggrund */
+    color: #333; /* Standard tekstfarve */
 }
 
+/* --- HERO-SEKTION --- */
+/* Øverste banner med baggrundsbillede og overlay */
 .hero {
-    height: 40vh;
+    height: 40vh; /* 40% af skærmhøjden */
     background: linear-gradient(rgba(100,70,0,0.6), rgba(100,70,0,0.6)),
     url("https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1950&q=80")
-    center/cover no-repeat;
-    display: flex;
+    center/cover no-repeat; /* Billede med gradient overlay */
+    display: flex; /* Centrerer indhold horisontalt og vertikalt */
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white; /* Tekstfarve i hero */
 }
 
+/* --- INDHOLDSSEKTION --- */
+/* Container til formularer og tekstindhold */
 .content {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 600px; /* Maksimal bredde */
+    margin: 2rem auto; /* Centrerer sektionen med top/bund margin */
+    background: white; /* Hvid baggrund for læsbarhed */
+    padding: 2rem; /* Indvendig padding */
+    border-radius: 15px; /* Runde hjørner */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Let skygge for dybde */
 }
 
+/* --- FORMULAR LABELS --- */
+/* Gør labels tydelige og med afstand */
 label {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
 }
 
+/* --- FORMULAR INPUT FELTER --- */
+/* Inputfelter til tekst og dato */
 input {
-    width: 100%;
+    width: 100%; /* Fylder hele bredden */
     padding: 10px;
     margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    border-radius: 8px; /* Runde hjørner */
+    border: 1px solid #ccc; /* Lys kant */
 }
 
+/* --- KNAPPER --- */
+/* Primær handling / submit knap */
 button {
-    background: #e6b800;
-    color: white;
+    background: #e6b800; /* Gul-orange baggrund */
+    color: white; /* Hvid tekst */
     padding: 10px 20px;
     margin-top: 1.5rem;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: pointer; /* Ændrer cursor ved hover */
 }
 
+/* --- TILBAGE-KNAP --- */
+/* Link knap til at gå tilbage */
 .back-btn {
     display: inline-block;
     margin-top: 1.5rem;
-    text-decoration: none;
-    background: #e6b800;
-    color: white;
+    text-decoration: none; /* Fjerner understregning */
+    background: #e6b800; /* Samme farve som submit knap */
+    color: white; /* Hvid tekst */
     padding: 10px 20px;
     border-radius: 6px;
 }

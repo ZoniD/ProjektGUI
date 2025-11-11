@@ -1,52 +1,53 @@
-/* --- Generel opsætning - centreret og ensartet med organisation-login --- */
+/* --- GENEREL OPSÆTNING --- */
+/* Sætter baggrund, centrering og layout for hele siden */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, rgba(0, 80, 50, 0.6), #006644);
-    height: 100vh;
+    background: linear-gradient(135deg, rgba(0, 80, 50, 0.6), #006644); /* Grøn gradient-baggrund */
+    height: 100vh; /* Fylder hele skærmhøjden */
     margin: 0;
-    display: flex;
+    display: flex; /* Centrerer indholdet */
     justify-content: center;
     align-items: center;
 }
 
-/* Login / Opret Bruger blok */
+/* --- LOGIN / OPRET BRUGER BOKS --- */
 .login-section {
-    display: none;
+    display: none; /* Skjult som standard */
     background-color: white;
     padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width: 320px; /* Samme bredde som organisation-login */
+    border-radius: 12px; /* Runde hjørner */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Let skyggeeffekt */
+    width: 320px; /* Ensartet bredde */
     text-align: center;
 }
 
-/* Vis sektionen der er target */
+/* Viser kun den sektion, som bliver "targeted" (f.eks. via #id i URL’en) */
 .login-section:target {
     display: block;
 }
 
-/* Default visning: login */
+/* Første sektion vises som standard (f.eks. login) */
 .login-section:first-of-type {
     display: block;
 }
 
-/* denne her boks er til overskrift */
+/* --- OVERSKRIFT --- */
 h1 {
     margin-bottom: 20px;
-    color: #019875; /* Grøn accent */
+    color: #019875; /* Grøn accentfarve */
 }
 
-/* det er til beskrivelse */
+/* --- BESKRIVELSE UNDER OVERSKRIFT --- */
 p {
     margin-bottom: 20px;
-    color: #475569;
+    color: #475569; /* Grå tekstfarve */
 }
 
-/* Formular */
+/* --- FORMULARSTYLING --- */
 form {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: column; /* Placerer felterne lodret */
+    gap: 12px; /* Afstand mellem felterne */
 }
 
 label {
@@ -56,18 +57,19 @@ label {
     color: #333;
 }
 
+/* Inputfelter til tekst, e-mail, password m.m. */
 input {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 14px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Gør padding inkluderet i bredden */
 }
 
-/* Knapper */
+/* --- KNAPPER --- */
 button {
-    background-color: #10b981;
+    background-color: #10b981; /* Grøn primær knapfarve */
     color: white;
     padding: 12px;
     font-size: 15px;
@@ -75,25 +77,28 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease; /* Glidende farveskift ved hover */
 }
 
+/* Knap ved hover bliver mørkere */
 button:hover {
     background-color: #059669;
 }
 
-/* det links der er under formular */
+/* --- LINKS UNDER FORMULAREN --- */
 .links {
     margin-top: 15px;
     font-size: 14px;
 }
 
+/* Styling af “Opret bruger” og “Tilbage”-links */
 .links a {
-    color: #10b981;
+    color: #10b981; /* Samme grønne farve som knapper */
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Understreg link ved hover */
 .links a:hover {
     text-decoration: underline;
 }
