@@ -6,7 +6,7 @@
   <title>ZeroWaste – Organisation</title>
 
   <!-- Forbind til CSS -->
-  <link rel="stylesheet" href="../../static/organisation.css">
+  <link rel="stylesheet" th:href="@{/organisation/organisation.css}">
 </head>
 
 <body>
@@ -29,15 +29,20 @@
       <h3>📢 Publicer kampagner</h3>
       <p>Opret bæredygtige initiativer, der inspirerer andre til at mindske spild og støtte velgørenhed.</p>
 
-      <a href="kampagner.html" class="btn">Opret kampagne</a>
+      <a href="/organisation/kampagner" class="btn">Opret kampagne</a>
 
     </div>
 
     <div class="card">
       <h3>🥕 Donér overskydende madvarer</h3>
       <p>Registrer og donér overskudsmad, så det kan distribueres til udsatte og velgørende formål.</p>
-      <a href="DonerOgRegistrer.html" class="btn">Registrer eller donér</a>
+      <a href="/organisation/donerOgRegistrer" class="btn">Registrer eller donér</a>
 
+    </div>
+    <div class="card">
+      <h3>🏠 Log Out</h3>
+      <p>Gå tilbage til hovedmenuen for ZeroWaste.</p>
+      <a href="/forside/index" class="btn">Til forsiden</a>
     </div>
   </div>
 </section>

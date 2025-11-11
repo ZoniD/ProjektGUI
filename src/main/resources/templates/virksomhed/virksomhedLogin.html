@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeroWaste - Login / Opret Virksomhed</title>
-    <link rel="stylesheet" href="../../static/virksomhed/virksomhedLogin.css">
+    <link rel="stylesheet" th:href="@{/virksomhed/virksomhedLogin.css}">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     <div id="login" class="login-section">
         <h1>ZeroWaste 🌿</h1>
         <p>Login for virksomheder</p>
-        <form action="virksomhed.html" method="get">
+        <form action="virksomhed" method="get">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Indtast virksomheds-email" required>
             <label for="password">Adgangskode:</label>
@@ -23,7 +23,7 @@
         </form>
         <div class="links">
             Har du ikke en konto? <a href="#opret">Opret virksomhed</a><br>
-            <a href="../valg.html">← Tilbage til Valg</a>
+            <a href="/forside/valg.html">← Tilbage til Valg</a>
         </div>
     </div>
 
@@ -31,7 +31,7 @@
     <div id="opret" class="login-section">
         <h1>Opret Virksomhed</h1>
         <p>Registrér din virksomhed hos ZeroWaste</p>
-        <form action="virksomhed.html" method="get">
+        <form action="virksomhed" method="get">
             <label for="virksomhedsnavn">Virksomhedsnavn:</label>
             <input type="text" id="virksomhedsnavn" name="virksomhedsnavn" placeholder="Indtast virksomhedsnavn" required>
             <label for="email2">Email:</label>
@@ -42,7 +42,7 @@
         </form>
         <div class="links">
             Har du allerede en konto? <a href="#login">Log ind</a><br>
-            <a href="../valg.html">← Tilbage til Valg</a>
+            <a href="/forside/valg">← Tilbage til Valg</a>
         </div>
     </div>
 

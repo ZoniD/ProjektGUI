@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrer eller Donér – ZeroWaste</title>
-  <link rel="stylesheet" href="../../static/DonerOgRegistrer.css">
+  <link rel="stylesheet" th:href="@{/organisation/DonerOgRegistrer.css}">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
     <button type="submit">Gem oplysninger</button>
   </form>
 
-  <a href="organisation.html" class="back-link">← Tilbage til organisation</a>
+  <a href="organisation" class="back-link">← Tilbage til organisation</a>
 </div>
 
 <script>
@@ -46,7 +46,7 @@
       alert("Vælg venligst en handling før du fortsætter.");
       return;
     }
-    window.location.href = "organisation.html";
+    window.location.href = "organisation";
   });
 </script>
 

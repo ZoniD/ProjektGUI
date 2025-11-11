@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opret kampagne – ZeroWaste</title>
-    <link rel="stylesheet" href="../../static/kampagner.css">
+    <link rel="stylesheet" th:href="@{/organisation/kampagner.css}">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
         <button type="submit">Gem kampagne</button>
     </form>
 
-    <a href="organisation.html" class="back-link">← Tilbage til organisation</a>
+    <a href="organisation" class="back-link">← Tilbage til organisation</a>
 </div>
 
 <script>
@@ -32,7 +32,7 @@
     document.getElementById("kampagneForm").addEventListener("submit", function(event) {
         event.preventDefault();
         alert("✅ Kampagne oprettet! Du sendes nu tilbage til organisationens side.");
-        window.location.href = "organisation.html";
+        window.location.href = "organisation";
     });
 </script>
 

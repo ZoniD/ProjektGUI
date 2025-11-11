@@ -4,45 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZeroWaste - Login / Opret Bruger</title>
-  <link rel="stylesheet" href="../../static/bruger/brugerLogin.css">
+  <link rel="stylesheet" th:href="@{/bruger/brugerLogin.css}">
 </head>
 <body>
 
-<!-- det er her til login -->
+<!-- Login sektionen -->
 <div id="login" class="login-section">
   <h1>ZeroWaste 🌿</h1>
   <p>Login til din konto</p>
-  <form action="bruger.html" method="get">
+  <form action="/bruger" method="get">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Indtast din email" required>
+
     <label for="password">Adgangskode:</label>
     <input type="password" id="password" name="password" placeholder="Indtast adgangskode" required>
+
     <button type="submit">Log ind</button>
   </form>
+
   <div class="links">
     Har du ikke en konto? <a href="#opret">Opret bruger</a><br>
-    <a href="../valg.html">⬅️ Tilbage til Valg</a>
+    <a href="/valg">⬅️ Tilbage til Valg</a>
   </div>
 </div>
 
-<!-- her i denne her kode bruges til at oprette en bruger  -->
+<!-- Opret bruger sektionen -->
 <div id="opret" class="login-section">
   <h1>Opret Bruger</h1>
   <p>Opret en ny konto hos ZeroWaste</p>
-  <form action="bruger.html" method="get">
+  <form action="/bruger" method="get">
     <label for="navn">Navn:</label>
     <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" required>
+
     <label for="email2">Email:</label>
     <input type="email" id="email2" name="email" placeholder="Indtast din email" required>
+
     <label for="password2">Adgangskode:</label>
     <input type="password" id="password2" name="password" placeholder="Vælg adgangskode" required>
+
     <button type="submit">Opret bruger</button>
   </form>
+
   <div class="links">
     Har du allerede en konto? <a href="#login">Log ind</a><br>
-    <a href="../valg.html">⬅️ Tilbage til Valg</a>
+    <a href="/valg">⬅️ Tilbage til Valg</a>
   </div>
 </div>
 
 </body>
 </html>
+

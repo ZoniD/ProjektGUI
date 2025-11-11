@@ -20,6 +20,45 @@ body {
     text-align: center;
 }
 
+.random-fact {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.fact-box {
+    background: linear-gradient(135deg, #e0f7e9, #c8f2d6); /* flot grøn gradient */
+    border-left: 6px solid #4CAF50;
+    padding: 20px 25px;
+    border-radius: 12px;
+    max-width: 650px;
+    text-align: left;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in;
+}
+
+.fact-box h3 {
+    margin-top: 0;
+    color: #2e7d32;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.fact-box p {
+    margin: 12px 0 0 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 .hero h1 {
     font-size: 3rem;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.4);

@@ -4,58 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeroWaste – Bruger</title>
-    <link rel="stylesheet" href="../../static/bruger/bruger.css">
+    <link rel="stylesheet" th:href="@{/bruger/bruger.css}">
 </head>
 
 <body>
 
-<!-- her er velkomst besked -->
+<!-- Hero / velkomst -->
 <section class="hero">
-    <h1>Bruger – Velkommen til ZeroWaste</h1>
+    <h1>Bruger – Velkommen til ZeroWaste 🌿</h1>
 </section>
 
-<!-- denne her del er til inhold -->
+<section class="random-fact">
+    <div class="fact-box">
+        <h3>🍎 Vidste du?</h3>
+        <p>Hver gang du smider mad ud, smider du ikke kun mad – du smider også penge, tid og energi væk! 🌍💸
+            Faktisk går over <strong>1,3 milliarder tons mad</strong> tabt hvert år globalt.
+            Forestil dig, hvis bare halvdelen blev brugt – vi kunne redde millioner af måltider og gøre planeten gladere. 💚
+            Klik rundt og se, hvordan du kan være en helt i dit eget køkken! 🥕👩‍🍳</p>
+    </div>
+</section>
+
+<!-- Indhold -->
 <section class="content">
-    <h2>Du er nu logget Ind - Vælg, hvad du vil gøre</h2>
+    <h2>Du er nu logget ind – vælg, hvad du vil gøre</h2>
     <p>Her kan du udforske opskrifter, læse artikler, se rapporter og tilføje varer for at bekæmpe madspild.</p>
 
     <div class="actions">
+
         <div class="card">
             <h3>🍽️ Se opskrifter</h3>
             <p>Find opskrifter baseret på rester, du allerede har derhjemme.</p>
-            <a href="opskrifter.html" class="btn">Gå til opskrifter</a>
+            <a href="/bruger/opskrifter" class="btn">Gå til opskrifter</a>
         </div>
 
         <div class="card">
             <h3>📰 Se artikler</h3>
             <p>Læs inspirerende historier og tips fra organisationer og eksperter.</p>
-            <a href="../artikler.html" class="btn">Læs artikler</a>
+            <a href="/artikler" class="btn">Læs artikler</a>
         </div>
 
         <div class="card">
             <h3>📊 Se min rapport</h3>
-            <p>Se din månedlige oversigt over madspild og CO₂ besparelser.</p>
-            <a href="rapport.html" class="btn">Vis rapport</a>
+            <p>Se din månedlige oversigt over madspild og CO₂-besparelser.</p>
+            <a href="/bruger/rapport" class="btn">Vis rapport</a>
         </div>
 
         <div class="card">
             <h3>➕ Tilføj vare</h3>
             <p>Registrer dine varer for at holde styr på udløbsdatoer og reducere spild.</p>
-            <a href="tilfojvare.html" class="btn">Tilføj vare</a>
+            <a href="/bruger/tilfojvare" class="btn">Tilføj vare</a>
         </div>
 
         <div class="card">
-            <h3>🏠 Til forsiden</h3>
+            <h3>🏠 Log Out</h3>
             <p>Gå tilbage til hovedmenuen for ZeroWaste.</p>
-            <a href="../../templates/Index.html" class="btn">Til forsiden</a>
+            <a href="/forside/index" class="btn">Til forsiden</a>
         </div>
+
     </div>
 </section>
 
-<!-- sidefod -->
+<!-- Footer -->
 <footer>
     &copy; 2025 ZeroWaste – Sammen bekæmper vi madspild.
 </footer>
 
 </body>
 </html>
+

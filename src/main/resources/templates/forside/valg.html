@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vælg Bruger Type</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: white;
+            background-color: #f4f4f4;
+        }
+
+        .valg {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0, 80, 50, 0.7), rgba(0, 80, 50, 0.7));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        .valg-knap {
+            text-decoration: none;
+            display: inline-block;
+            background: linear-gradient(145deg, #00b894, #019875);
+            color: white;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 0 #019875, 0 6px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+
+        .valg-knap:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+            background: linear-gradient(145deg, #019875, #00b894);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="valg">
+    <div class="container">
+        <h1>Vælg din bruger type</h1>
+        <div class="options">
+            <!-- Bruger -->
+            <a href="/bruger/login" class="valg-knap">Bruger</a>
+
+            <!-- Virksomhed -->
+            <a href="/virksomhed/login" class="valg-knap">Virksomhed</a>
+
+            <!-- Organisation -->
+            <a href="/organisation/organisationLogIn" class="valg-knap">Organisation</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+
